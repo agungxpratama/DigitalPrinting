@@ -5,7 +5,7 @@ class Jasa extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('Model_pemesanan');
+        $this->load->model('model_pemesanan');
         $this->load->library('form_validation');
     }
 
@@ -50,6 +50,6 @@ class Jasa extends CI_Controller
 
         $this->model_pemesanan->tambah_pesanan($data, 'tb_invoice');
 
-        redirect('pemesanan');
+        redirect('index.php/pemesanan');
     }
 }

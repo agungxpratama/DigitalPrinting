@@ -22,64 +22,27 @@
                                         </tr><br>
                                     </thead>
                                     <tbody>
+                                        <?php
+                                        $no = 0;
+                                        foreach ($pesanan as $p):
+                                            $no++;?>
                                         <tr>
-                                            <th scope="row">1</th>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
+                                            <th scope="row"><?= $no ?></th>
+                                            <td><?= $p->nama ?></td>
+                                            <td><?= $p->alamat ?></td>
+                                            <td></td>
+                                            <td><?= $p->jumlah ?></td>
+                                            <td><?= $p->bahan ?></td>
                                         </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
-                                            <td>Jacob</td>
-                                            <td>Thornton</td>
-                                            <td>@fat</td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">3</th>
-                                            <td>Larry</td>
-                                            <td>the Bird</td>
-                                            <td>@twitter</td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">3</th>
-                                            <td>Larry</td>
-                                            <td>the Bird</td>
-                                            <td>@twitter</td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">3</th>
-                                            <td>Larry</td>
-                                            <td>the Bird</td>
-                                            <td>@twitter</td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">3</th>
-                                            <td>Larry</td>
-                                            <td>the Bird</td>
-                                            <td>@twitter</td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">3</th>
-                                            <td>Larry</td>
-                                            <td>the Bird</td>
-                                            <td>@twitter</td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
-                                        </tr>
+                                    <?php endforeach; ?>
                                         <br><br><br>
-
                                     </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td>
+                                                <a href="<?= base_url('index.php/jasa/formpesan') ?>">Tambah</a>
+                                            </td>
+                                        </tr>
+                                    </tfoot>
                                 </table><br><br><br><br><br><br>
                         </section>

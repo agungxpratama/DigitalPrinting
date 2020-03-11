@@ -6,14 +6,14 @@
                     <h3 class="heading">FORM PEMSANAN</h3>
                     <!-- <p>Fill all form field to go next step</p> -->
                 </div>
-                <form class="form-register" method="post" action="<?= base_url('jasa/tambahpesanan') ?> ">
+                <form class="form-register" method="post" action="<?= base_url('index.php/jasa/tambahpesanan') ?> ">
                     <div id="form-total">
                         <section>
                             <div class="inner">
                                 <div class="form-row">
                                     <div class="form-holder form-holder-2">
                                         <label class="form-row-inner">
-                                            <input type="text" class="form-control" required>
+                                            <input type="text" class="form-control" name="nama" required>
                                             <span class="label" name="nama">Nama</span>
                                             <span class="border"></span>
                                         </label>
@@ -22,7 +22,7 @@
                                 <div class="form-row">
                                     <div class="form-holder form-holder-2">
                                         <label class="form-row-inner">
-                                            <input type="text" class="form-control" required>
+                                            <input type="text" class="form-control" name="alamat" required>
                                             <span class="label" name="alamat">Alamat Lengkap</span>
                                             <span class="border"></span>
                                         </label>
@@ -31,7 +31,7 @@
                                 <div class="form-row">
                                     <div class="form-holder form-holder-2">
                                         <label class="form-row-inner">
-                                            <input type="text" class="form-control" required>
+                                            <input type="text" class="form-control" name="jumlah" required>
                                             <span class="label" name="jumlah">Jumlah</span>
                                             <span class="border"></span>
                                         </label>
@@ -40,7 +40,7 @@
                                 <div class="form-row">
                                     <div class="form-holder form-holder-2">
                                         <label class="form-row-inner">
-                                            <input type="text" class="form-control" required>
+                                            <input type="text" class="form-control" name="bahan" required>
                                             <span class="label" name="bahan">Bahan</span>
                                             <span class="border"></span>
                                         </label>
@@ -56,3 +56,5 @@
                                 <center><button type="submit" class="btn btn-primary">Kirim Pesanan </button>
                                 </center><br><br>
                         </section>
+                    </div>
+                </form>

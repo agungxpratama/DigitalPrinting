@@ -14,20 +14,20 @@
                         <div class="main-menu  d-none d-lg-block text-center">
                             <nav>
                                 <ul id="navigation">
-                                    <li><a class="active" href="<?= base_url('home1') ?>">home</a></li>
-                                    <li><a href="<?= base_url('home#caraorder') ?>">Cara Order</a></li>
+                                    <li><a class="active" href="<?= base_url('index.php/home') ?>">home</a></li>
+                                    <li><a href="<?= base_url('index.php/caraorder') ?>">Cara Order</a></li>
                                     <!-- <li><a href ="Portfolio.html">Portfolio</a></li> -->
                                     <li><a href="#">Vendor <i class="ti-angle-down"></i></a>
 
                                         <ul class="submenu">
-                                            <li><a href="<?= base_url('jasa') ?>">Vendor 1</a></li>
+                                            <li><a href="<?= base_url('index.php/jasa') ?>">Vendor 1</a></li>
                                             <li><a href="#">Vendor 2</a></li>
                                             <li><a href="#">Vendor 3</a></li>
                                             <li><a href="#">Vendor 4</a></li>
                                         </ul>
                                     </li>
 
-                                    <li><a href="<?= base_url('pemesanan') ?>">Pemesanan </a>
+                                    <li><a href="<?= base_url('index.php/pemesanan') ?>">Pemesanan </a>
                                         <!-- <ul class="submenu">
                                             <li><a href="blog.html">blog</a></li>
                                             <li><a href="single-blog.html">single-blog</a></li>
@@ -40,7 +40,7 @@
                     </div>
                     <div class="col-lg-2 d-none d-lg-block">
                         <div class="log_chat_area d-flex align-items-end">
-                            <a href="<?= base_url('profile') ?>" class="say_hi">Akun</a>
+                            <a href="<?= base_url('index.php/profile') ?>" class="say_hi">Akun</a>
                         </div>
                     </div>
                     <div class="col-12">

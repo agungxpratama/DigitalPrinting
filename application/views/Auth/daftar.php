@@ -3,11 +3,10 @@
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url('<?= base_url('assets/assets3/') ?>images/bg-01.jpg');">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" action="<?= base_url('index.php/auth/register'); ?>" method="post">
 					<span class="login100-form-title p-b-49">
 						Daftar
 					</span>
-
 					<div class="wrap-input100 validate-input m-b-23" data-validate="Username is reauired">
 						<span class="label-input100">Nama</span>
 						<input class="input100" type="text" name="nama" placeholder="Nama">
@@ -42,8 +41,8 @@
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
-							<button class="login100-form-btn">
-								<a href="<?= base_url('auth') ?>">Daftar</a>
+							<button class="login100-form-btn" type="submit">
+								Daftar
 							</button>
 						</div>
 						<div class="txt1 text-center p-t-54 p-b-20">
@@ -56,7 +55,8 @@
 
 
 
-					<!-- 
+
+					<!--
 					<div class="flex-c-m">
 						<a href="#" class="login100-social-item bg1">
 							<i class="fa fa-facebook"></i>

@@ -14,8 +14,8 @@
                         <div class="main-menu  d-none d-lg-block text-center">
                             <nav>
                                 <ul id="navigation">
-                                    <li><a class="active" href="#">home</a></li>
-                                    <li><a href="<?= base_url('home#caraorder') ?>">Cara Order</a></li>
+                                    <li><a class="active" href="<?= base_url('index.php/home1') ?>">home</a></li>
+                                    <li><a href="<?= base_url('index.php/caraorder') ?>">Cara Order</a></li>
                                     <!-- <li><a href ="Portfolio.html">Portfolio</a></li> -->
                                     <li><a href="#">Vendor <i class="ti-angle-down"></i></a>
 
@@ -27,7 +27,7 @@
                                         </ul>
                                     </li>
 
-                                    <li><a href="#">Pemesanan </a>
+                                    <li><a href="<?= base_url('index.php/pemesanan') ?>">Pemesanan </a>
                                         <!-- <ul class="submenu">
                                             <li><a href="blog.html">blog</a></li>
                                             <li><a href="single-blog.html">single-blog</a></li>

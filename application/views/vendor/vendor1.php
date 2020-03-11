@@ -28,7 +28,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single_Portfolio wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
                         <div class="portfolio_thumb">
-                            <img src="assets/img/kal.png" alt="">
+                            <img src="<?= base_url() ?>assets/img/kal.png" alt="">
                         </div>
                         <div class="portfolio_hover">
                             <div class="title">

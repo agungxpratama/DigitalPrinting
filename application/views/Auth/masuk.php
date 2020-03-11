@@ -3,7 +3,7 @@
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url('<?= base_url('assets/assets3/') ?>images/bg-01.jpg');">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" action="<?= base_url('index.php/auth/cekLogin'); ?>" method="post">
 					<span class="login100-form-title p-b-49">
 						Login
 					</span>
@@ -29,14 +29,14 @@
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
-							<button class="login100-form-btn">
-								<a href="<?= base_url('home1') ?>">Login</a>
+							<button class="login100-form-btn" type="submit">
+								Login
 							</button>
 						</div>
 					</div>
 					<div class="txt1 text-center p-t-54 p-b-20">
 						<span>
-							<a href="<?= base_url('auth/daftar') ?>">Belum Punya Akun?</a></li>
+							<a href="<?= base_url('index.php/auth/daftar') ?>">Belum Punya Akun?</a></li>
 
 						</span>
 					</div>

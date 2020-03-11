@@ -7,8 +7,8 @@
                         <h3 class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".1s">
                             DIGITAL PRINTING<br>
                         </h3>
-                        <a class="boxed-btn3 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".2s" href="<?= base_url('auth') ?>">Masuk</a>
-                        <a class="boxed-btn3 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".2s" href="<?= base_url('auth/daftar') ?>">Daftar</a>
+                        <a class="boxed-btn3 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".2s" href="<?= base_url('index.php/auth') ?>">Masuk</a>
+                        <a class="boxed-btn3 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".2s" href="<?= base_url('index.php/auth/daftar') ?>">Daftar</a>
                     </div>
                 </div>
             </div>
