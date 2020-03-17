@@ -37,7 +37,11 @@
 					<div class="txt1 text-center p-t-54 p-b-20">
 						<span>
 							<a href="<?= base_url('index.php/auth/daftar') ?>">Belum Punya Akun?</a></li>
-
+						</span>
+						<br>
+						<br>
+						<span>
+							<a href="<?= base_url('index.php/admin') ?>">Login Admin</a></li>
 						</span>
 					</div>
 
