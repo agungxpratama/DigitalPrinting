@@ -9,9 +9,10 @@
             <h3 p class="mid_text wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">Kalender</p>
             </h3>
 
-            <span class="form-sub-label-container " style="vertical-align:top">
+            <form action="<?= base_url('index.php/jasa/formpesan') ?>" method="post">
+            <span class="form-sub-label-container" style="vertical-align:top">
               <label class="form-sub-label" for="input_3_quantity_1006_0" style="min-height:13px"> Quantity </label>
-              <select class="form-dropdown" name="q3_input3[special_1006][item_0]" id="input_3_quantity_1006_0">
+              <select class="form-control" name="q3_input3[special_1006][item_0]" id="exampleFormControlSelect1">
                 <option value="1"> 1 </option>
                 <option value="2"> 2 </option>
                 <option value="3"> 3 </option>
@@ -23,8 +24,7 @@
                 <option value="9"> 9 </option>
                 <option value="10"> 10 </option>
               </select>
-            </span><br>
-            <form>
+            </span>
 
               <div class="form-group">
                 <label for="exampleFormControlSelect1">Ukuran</label>
@@ -43,9 +43,10 @@
                 </select>
               </div>
 
-            </form>
             <p class="last_text wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">Silahkan pilih</p>
-            <a href="<?= base_url('jasa/formpesan') ?>" class="boxed-btn3 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".7s">Pesan</a>
+            <!-- <a href="<?= base_url('jasa/formpesan') ?>" class="boxed-btn3 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".7s">Pesan</a> -->
+            <button type="submit" name="Pesan" class="boxed-btn3 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".7s">Pesan</button>
+            </form>
 
 
 

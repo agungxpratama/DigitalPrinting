@@ -8,7 +8,7 @@
                     <h3 class="heading">Cara Order Barang</h3>
                     <!-- <p>Fill all form field to go next step</p> -->
                 </div>
-                <form class="form-register" action="#" method="post">
+                <form class="form-register" action="<?= base_url('index.php/pemesanan/simmpan_pemesanan/'); ?>" method="post">
                     <div id="form-total">
                         <!-- SECTION 1 -->
                         <h2>

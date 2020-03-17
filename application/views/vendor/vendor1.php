@@ -34,7 +34,7 @@
                             <div class="title">
                                 <!-- <span>App Design</span> -->
                                 <h3>Kalender</h3>
-                                <a class="boxed-btn3" href="<?= base_url('jasa/detail') ?>">View</a>
+                                <a class="boxed-btn3" href="<?= base_url('index.php/jasa/detail') ?>">View</a>
                             </div>
                         </div>
                     </div>

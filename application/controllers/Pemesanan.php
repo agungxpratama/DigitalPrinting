@@ -27,4 +27,11 @@ class Pemesanan extends CI_Controller
         $this->load->view('order/formpemesanan');
         $this->load->view('order/jspesananuser');
     }
+
+    public function simpan_pemesanan()
+    {
+        $data = array(
+            '' => ,
+        );
+    }
 }
