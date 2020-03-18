@@ -62,7 +62,7 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Supply chain:</h6>
-            <a class="collapse-item" href="<?= base_url()?>index.php/kosumen/data_profil">Data Konsumen</a>
+            <a class="collapse-item" href="<?= base_url()?>index.php/konsumen/data_profil">Profil</a>
             <a class="collapse-item" href="<?= base_url()?>index.php/konsumen/pemesanan">Pemesanan</a>
             <a class="collapse-item" href="<?= base_url()?>index.php/konsumen/status_pemesanan">Status Pemesanan</a>
             <a class="collapse-item" href="<?= base_url()?>index.php/konsumen/histori_pemesanan">Histori Pemesanan</a>
@@ -268,7 +268,7 @@
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="<?php  ?>">
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                   Profile
                 </a>
