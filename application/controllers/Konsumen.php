@@ -44,9 +44,39 @@ class Konsumen extends CI_Controller {
 
     public function pesan($id)
     {
+        $where = array('idbarang' => $id, );
+        $data['result'] = $this->M_All->view_where('barang', $where)->row();
         $this->load->view('admin/header');
-
+        $this->load->view('konsumen/view', $data);
         $this->load->view('admin/footer');
+    }
+
+    public function simpan_pesanan()
+    {
+        $harga = $this->input->post('harga');
+        $idbarang = $this->input->post('id_barang');
+        $tglpesan = $this->input->post('tgl_pesan');
+        $tglbayar = $this->input->post('tgl_bayar');
+        $jumlahbarang = $this->input->post('jumlahbarang');
+
+        $cari_data = array(
+            'username' => $this->session->userdata('nama'), );
+        $dataKonsumen = $this->M_All->view_where('user', $cari_data)->row();
+        $cari_data2 = array(
+            'iduser' => $dataKonsumen->iduser, );
+        $dataKon = $this->M_All->view_where('konsumen', $cari_data2)->row();
+        $data = array(
+            'idbarang' => $idbarang,
+            'tglpesan' => $tglpesan,
+            'tglbayar' => $tglbayar,
+            'jumlahbarang' => $jumlahbarang,
+            'jumlahbayar' => $harga.$jumlahbarang,
+            'idkonsumen' => $dataKon->idkon,
+
+        );
+
+        $this->M_All->insert('invoice', $data);
+        redirect('index.php/konsumen/');
     }
 
     public function data_profil()
@@ -61,7 +91,9 @@ class Konsumen extends CI_Controller {
 
     public function pemesanan()
     {
+        $data['result'] = $this->M_All->get('invoice')->result();
         $this->load->view('admin/header');
+        $this->load->view('konsumen/pesanan', $data);
         $this->load->view('admin/footer');
     }
 
@@ -83,5 +115,10 @@ class Konsumen extends CI_Controller {
         $this->load->view('admin/header');
         $this->load->view('konsumen/vendor', $data);
         $this->load->view('admin/footer');
+    }
+
+    function Logout(){
+        $this->session->sess_destroy();
+        redirect(base_url('index.php/auth'));
     }
 }
