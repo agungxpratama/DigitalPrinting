@@ -81,7 +81,8 @@ class Konsumen extends CI_Controller {
 
     public function data_profil()
     {
-        $data['result'] = $this->M_All->join('konsumen', 'user')->row();
+        $where = array('user.username' => $this->session->userdata('nama'), );
+        $data['result'] = $this->M_All->join('konsumen', 'user', $where)->row();
         $this->load->view('admin/header');
         // $this->load->view('profile/headprofil');
         $this->load->view('profile/profil', $data);
