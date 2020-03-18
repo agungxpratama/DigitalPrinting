@@ -25,9 +25,9 @@ class Konsumen extends CI_Controller {
     	// memuat model yang bertujuan tuntuk mendapatkan data admin
     	$this->load->model('M_All');
 
-    		// if($this->session->userdata('status') != "login"){
-    		// 	// redirect(base_url("index.php/"));
-    		// }
+		if($this->session->userdata('status') != "login"){
+			redirect(base_url("index.php/auth"));
+		}
     	// if($this->session->userdata('role') != "admin"){
     	// 	redirect(base_url("index.php/"));
     	// }
