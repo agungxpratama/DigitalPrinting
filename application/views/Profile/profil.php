@@ -21,7 +21,7 @@
                                                         <div class="card-title mb-4">
                                                             <div class="d-flex justify-content-start">
                                                                 <div class="image-container">
-                                                                    <img src="http://placehold.it/150x150" id="imgProfile" style="width: 150px; height: 150px" class="img-thumbnail" />
+                                                                    <img src="<?= base_url('assets_admin/foto').$result->gambar ?>" id="imgProfile" style="width: 150px; height: 150px" class="img-thumbnail" />
                                                                     <div class="middle">
                                                                         <input type="button" class="btn btn-secondary" id="btnChangePicture" value="Change" />
                                                                         <input type="file" style="display: none;" id="profilePicture" name="file" />
@@ -37,54 +37,31 @@
                                                             </div>
                                                         </div>
 
-
-
-
                                                         <div class="row">
                                                             <div class="col-sm-3 col-md-2 col-5">
                                                                 <label style="font-weight:bold;">Nama Lengkap</label>
                                                             </div>
                                                             <div class="col-md-8 col-6">
-                                                                Jamshaid Kamran
+                                                                <?= $result->username ?>
                                                             </div>
                                                         </div>
                                                         <hr />
+                                                        <div class="row">
+                                                            <div class="col-sm-3 col-md-2 col-5">
+                                                                <label style="font-weight:bold;">Alamat</label>
+                                                            </div>
+                                                            <div class="col-md-8 col-6">
+                                                                <?= $result->alamat ?>
+                                                            </div>
+                                                        </div>
+                                                        <hr />
+                                                        <div class="row">
+                                                            <div class="col-sm-3 col-md-2 col-5">
+                                                                <label style="font-weight:bold;">No HP</label>
+                                                            </div>
+                                                            <div class="col-md-8 col-6">
+                                                                <?= $result->noHp ?>
 
-                                                        <div class="row">
-                                                            <div class="col-sm-3 col-md-2 col-5">
-                                                                <label style="font-weight:bold;">Tanggal Lahir</label>
-                                                            </div>
-                                                            <div class="col-md-8 col-6">
-                                                                March 22, 1994.
-                                                            </div>
-                                                        </div>
-                                                        <hr />
-
-
-                                                        <div class="row">
-                                                            <div class="col-sm-3 col-md-2 col-5">
-                                                                <label style="font-weight:bold;">Something</label>
-                                                            </div>
-                                                            <div class="col-md-8 col-6">
-                                                                Something
-                                                            </div>
-                                                        </div>
-                                                        <hr />
-                                                        <div class="row">
-                                                            <div class="col-sm-3 col-md-2 col-5">
-                                                                <label style="font-weight:bold;">Something</label>
-                                                            </div>
-                                                            <div class="col-md-8 col-6">
-                                                                Something
-                                                            </div>
-                                                        </div>
-                                                        <hr />
-                                                        <div class="row">
-                                                            <div class="col-sm-3 col-md-2 col-5">
-                                                                <label style="font-weight:bold;">Something</label>
-                                                            </div>
-                                                            <div class="col-md-8 col-6">
-                                                                Something
                                                             </div>
                                                         </div>
                                                         <hr />

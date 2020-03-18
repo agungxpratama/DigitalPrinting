@@ -28,7 +28,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url()?>index.php/">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url()?>index.php/admin">
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-home"></i>
         </div>
@@ -40,7 +40,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="<?= base_url()?>index.php/admin">
+        <a class="nav-link" href="<?= base_url()?>index.php/konsumen">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
@@ -62,10 +62,10 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Supply chain:</h6>
-            <a class="collapse-item" href="<?= base_url()?>index.php/Admin/data_konsumen">Data Konsumen</a>
-            <a class="collapse-item" href="<?= base_url()?>index.php/Admin/pemesanan">Pemesanan</a>
-            <a class="collapse-item" href="<?= base_url()?>index.php/Admin/status_pemesanan">Status Pemesanan</a>
-            <a class="collapse-item" href="<?= base_url()?>index.php/Admin/histori_pemesanan">Histori Pemesanan</a>
+            <a class="collapse-item" href="<?= base_url()?>index.php/kosumen/data_profil">Data Konsumen</a>
+            <a class="collapse-item" href="<?= base_url()?>index.php/konsumen/pemesanan">Pemesanan</a>
+            <a class="collapse-item" href="<?= base_url()?>index.php/konsumen/status_pemesanan">Status Pemesanan</a>
+            <a class="collapse-item" href="<?= base_url()?>index.php/konsumen/histori_pemesanan">Histori Pemesanan</a>
           </div>
         </div>
       </li>
@@ -80,14 +80,14 @@
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="charts.html">
+        <a class="nav-link" href="<?= base_url()?>index.php/konsumen/vendor">
           <i class="fas fa-fw fa-chart-area"></i>
-          <span>Statistik</span></a>
+          <span>Vendor</span></a>
       </li>
 
       <!-- Nav Item - Tables -->
       <li class="nav-item">
-        <a class="nav-link" href="tables.html">
+        <a class="nav-link" href="<?= base_url()?>index.php/konsumen/">
           <i class="fas fa-fw fa-table"></i>
           <span>Daftar Harga</span></a>
       </li>

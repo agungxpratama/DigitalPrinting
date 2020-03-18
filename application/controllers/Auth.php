@@ -28,7 +28,7 @@ class Auth extends CI_Controller
 			);
             // ditampung di array
 
-        $cek = $this->M_All->view_where("konsumen",$where)->num_rows();
+        $cek = $this->M_All->view_where("user",$where)->num_rows();
 
         if ($cek > 0) {
             $data_session = array(
@@ -38,7 +38,7 @@ class Auth extends CI_Controller
 
             $this->session->set_userdata($data_session);
             // menerapkan data session sesuai dengan nama username
-			redirect(base_url("index.php/home1"));
+			redirect(base_url("index.php/konsumen"));
             // apabila berhasil maka akan langsung ke halaman welcome
 		}else{
 			echo "Username dan password salah !";
@@ -54,22 +54,59 @@ class Auth extends CI_Controller
 
     public function register()
     {
-        $nama = $this->input->post('nama');
-        $alamat = $this->input->post('alamat');
-        $nohp = $this->input->post('nohp');
-        $username = $this->input->post('username');
-        $pass = $this->input->post('pass');
+        $config['upload_path']          = './assets_admin/img/';
+		$config['overwrite']        = true;
+        $config['allowed_types']        = 'gif|jpg|png';
+        // $config['max_size']             = 1024;
+		// $config['max_width']            = 1024;
+        // $config['max_height']           = 768;
 
-        $data = array(
-            'nama' => $nama,
-            'alamat' => $alamat,
-            'no_hp' => $nohp,
-            'username' => $username,
-            'password' => $pass,
-            'id_role' => 2,
-        );
+        $this->load->library('upload', $config);
 
-        $this->M_All->insert('konsumen', $data);
-        redirect('index.php/auth/');
+		if ( ! $this->upload->do_upload('gambar')){
+            $error = array('error' => $this->upload->display_errors());
+            // $this->load->view('upload_form', $error);
+            echo print_r($error);
+			echo "<script> alert('Foto Konsumen Gagal diunggah');</script>";
+        }else{
+            $data = array('upload_data' => $this->upload->data());
+            // $this->load->view('upload_success', $data);
+            $nama = $this->input->post('nama');
+            $alamat = $this->input->post('alamat');
+            $nohp = $this->input->post('nohp');
+            $username = $this->input->post('username');
+            $email = $this->input->post('email');
+            $pass = $this->input->post('pass');
+            $gambar = $this->upload->data('file_name');
+
+
+            $data2 = array(
+                'username' => $username,
+                'password' => $pass,
+                'email' => $email,
+            );
+			if ($this->M_All->insert('user', $data2) != true) {
+                $where = array(
+                    'username' => $username, );
+                $username = $this->M_All->view_where('user', $where)->row();
+                $data = array(
+                    // 'nama' => $nama,
+                    'alamat' => $alamat,
+                    'noHp' => $nohp,
+                    'idrole' => 2,
+                    'gambar' => $gambar,
+                    'iduser' => $username->iduser
+                );
+                if ($this->M_All->insert('konsumen', $data) != true) {
+
+                    redirect('index.php/auth');
+                }
+				// echo "<script> alert('Data KOnsumen berhasil ditambah');</script>";
+			}else{
+				redirect('index.php/auth/register');
+				echo "<script> alert('Data konsumen gagal ditambah');</script>";
+			}
+        }
+
     }
 }

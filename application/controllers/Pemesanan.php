@@ -11,7 +11,7 @@ class Pemesanan extends CI_Controller
 
     public function index()
     {
-        $data['pesanan'] = $this->M_All->get('tb_invoice')->result();
+        $data['pesanan'] = $this->M_All->get('invoice')->result();
         $this->load->view('templates/headutama');
         $this->load->view('templates/navbarhome1');
         $this->load->view('order/headpesananuser');
@@ -30,8 +30,8 @@ class Pemesanan extends CI_Controller
 
     public function simpan_pemesanan()
     {
-        $data = array(
-            '' => ,
-        );
+        // $data = array(
+        //     '' => ,
+        // );
     }
 }
