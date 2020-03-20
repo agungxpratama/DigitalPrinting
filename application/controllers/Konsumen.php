@@ -72,6 +72,7 @@ class Konsumen extends CI_Controller {
             'jumlahbarang' => $jumlahbarang,
             'jumlahbayar' => $harga.$jumlahbarang,
             'idkonsumen' => $dataKon->idkon,
+            'status' => 0,
 
         );
 
@@ -92,7 +93,12 @@ class Konsumen extends CI_Controller {
 
     public function pemesanan()
     {
-        $data['result'] = $this->M_All->get('invoice')->result();
+        $where_ = array('username' => $this->session->userdata('nama'), );
+        $idkonsumen = $this->M_All->view_where('user', $where_)->row();
+        $where = array('iduser' => $idkonsumen->iduser );
+        $idkon = $this->M_All->view_where('konsumen', $where)->row();
+        $where_at = array('idkonsumen' => $idkon->idkon );
+        $data['result'] = $this->M_All->view_where('invoice', $where_at)->result();
         $this->load->view('admin/header');
         $this->load->view('konsumen/pesanan', $data);
         $this->load->view('admin/footer');
@@ -100,14 +106,31 @@ class Konsumen extends CI_Controller {
 
     public function status_pemesanan()
     {
+        $where_ = array('username' => $this->session->userdata('nama'), );
+        $idkonsumen = $this->M_All->view_where('user', $where_)->row();
+        $where = array('iduser' => $idkonsumen->iduser );
+        $idkon = $this->M_All->view_where('konsumen', $where)->row();
+        $where_at = array('idkonsumen' => $idkon->idkon );
+        $data['result'] = $this->M_All->view_where('invoice', $where_at)->result();
         $this->load->view('admin/header');
+        $this->load->view('konsumen/status_pesanan', $data);
         $this->load->view('admin/footer');
     }
 
-    public function histori_pemesansn()
+    public function histori_pemesanan()
     {
+        $where_ = array('username' => $this->session->userdata('nama'), );
+        $idkonsumen = $this->M_All->view_where('user', $where_)->row();
+        $where = array('iduser' => $idkonsumen->iduser );
+        $idkon = $this->M_All->view_where('konsumen', $where)->row();
+        $where_at = array(
+            'idkonsumen' => $idkon->idkon,
+            'status' => 3
+        );
+        $data['result'] = $this->M_All->view_where('invoice', $where_at)->result();
         $this->load->view('admin/header');
-        $this->load->view('admin/footer');// code...
+        $this->load->view('konsumen/history', $data);
+        $this->load->view('admin/footer');
     }
 
     public function vendor()
