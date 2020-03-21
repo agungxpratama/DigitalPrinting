@@ -64,7 +64,7 @@
                 <td><?php echo $r->jumlahbarang ?></td>
                 <td><?php echo $r->jumlahbayar ?></td>
                 <td>
-                    <?php if ( $r->status == 3){ ?>
+                    <?php if ( $r->status == 2){ ?>
                         <button type="button" class="btn btn-secondary">
                           Selesai <span class="badge badge-light">Anda</span>
                           <span class="sr-only">unread messages</span>
