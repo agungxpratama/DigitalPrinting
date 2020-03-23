@@ -21,7 +21,7 @@
                                                         <div class="card-title mb-4">
                                                             <div class="d-flex justify-content-start">
                                                                 <div class="image-container">
-                                                                    <img src="<?= base_url('assets_admin/foto').$result->gambar ?>" id="imgProfile" style="width: 150px; height: 150px" class="img-thumbnail" />
+                                                                    <img src="<?= base_url('assets_admin/img').$result->gambar ?>" id="imgProfile" style="width: 150px; height: 150px" class="img-thumbnail" />
                                                                     <div class="middle">
                                                                         <input type="button" class="btn btn-secondary" id="btnChangePicture" value="Change" />
                                                                         <input type="file" style="display: none;" id="profilePicture" name="file" />
