@@ -52,7 +52,7 @@
                 <th>Tanggal Pesan</th>
                 <th>Jumlah Barang</th>
                 <th>Jumlah Bayar</th>
-                <th>Edit</th>
+                <!-- <th>Edit</th> -->
                 <th>Delete</th>
                 <th>Status</th>
             </tr>
@@ -65,10 +65,10 @@
                 <td><?php echo $r->tglpesan ?></td>
                 <td><?php echo $r->jumlahbarang ?></td>
                 <td><?php echo $r->jumlahbayar ?></td>
-                <td>
+                <!-- <td>
                     <a href="<?php echo base_url(); ?>supplier/updatesupplier/<?php echo $r->idinvoice; ?>" class="badge badge-success float-right" style=" padding-top: 10px;padding-right: 10px; padding-bottom: 10px;padding-left: 10px;"><i class="fas fa-edit"></i> Edit</a> <br><br>
 
-                </td>
+                </td> -->
                 <td>
                     <a href="<?php echo base_url(); ?>supplier/hapussupplier/<?php echo $r->idinvoice; ?>" class="badge badge-danger float-right" onclick="return confirm('Anda yakin?'); " style="padding-top: 10px;padding-right: 10px; padding-bottom: 10px;padding-left: 10px;"><i class="fas fa-trash-alt"></i> Delete</a>
                 </td>
