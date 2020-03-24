@@ -152,6 +152,7 @@ class Konsumen extends CI_Controller {
 
         $this->M_All->update('konsumen', $where, $data);
         $this->M_All->update('user', $where, $data2);
+        redirect('index.php/konsumen/data_profil');
     }
 
     public function vendor()
