@@ -70,7 +70,7 @@ class Konsumen extends CI_Controller {
             'tglpesan' => $tglpesan,
             'tglbayar' => $tglbayar,
             'jumlahbarang' => $jumlahbarang,
-            'jumlahbayar' => $harga.$jumlahbarang,
+            'jumlahbayar' => $harga*$jumlahbarang,
             'idkonsumen' => $dataKon->idkon,
             'status' => 0,
 
