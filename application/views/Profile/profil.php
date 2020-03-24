@@ -68,8 +68,42 @@
 
                                                     </div>
 
-                                                    <button type="button" class="btn btn-info">Edit Profile</button><br><br>
+                                                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModalCenter">Edit Profile</button><br><br>
 
+                                                    <!-- Modal -->
+                                                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                                      <div class="modal-dialog modal-dialog-centered" role="document">
+                                                        <div class="modal-content">
+                                                          <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLongTitle">Edit Data</h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                              <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                          </div>
+                                                          <div class="modal-body">
+                                                            <form class="" action="<?= base_url('index.php/konsumen/update') ?>" method="post">
+                                                                <div class="form-group col-md-6">
+                                                                  <label for="inputEmail4">Nama Lengkap</label>
+                                                                  <input type="email" class="form-control" id="inputEmail4" placeholder="Nama" name="nama" value="<?= $result->username ?>">
+                                                                  <input type="hidden" name="iduser" value="<?= $result->iduser ?>">
+                                                                </div>
+                                                                <div class="form-group col-md-6">
+                                                                  <label for="inputEmail4">Alamat</label>
+                                                                  <input type="email" class="form-control" id="inputEmail4" placeholder="Alamat" name="alamat" value="<?= $result->alamat ?>">
+                                                                </div>
+                                                                <div class="form-group col-md-6">
+                                                                  <label for="inputEmail4">No Hp</label>
+                                                                  <input type="email" class="form-control" id="inputEmail4" placeholder="No HP" name="no_hp" value="<?= $result->noHp ?>">
+                                                                </div>
+                                                          </div>
+                                                          <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                            <button type="submit" class="btn btn-primary">Update</button>
+                                                            </form>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </div>
 
                                                     <!-- <div class="tab-pane fade" id="connectedServices" role="tabpanel" aria-labelledby="ConnectedServices-tab">
                                                         Facebook, Google, Twitter Account that are connected to this account

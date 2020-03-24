@@ -133,6 +133,27 @@ class Konsumen extends CI_Controller {
         $this->load->view('admin/footer');
     }
 
+    public function update()
+    {
+        $nama = $this->input->post('nama');
+        $iduser = $this->input->post('iduser');
+        $alamat = $this->input->post('alamat');
+        $no_hp = $this->input->post('no_hp');
+        $where = array(
+            'iduser' => $iduser,
+        );
+        $data = array(
+            'alamat' => $alamat,
+            'noHp' => $no_hp,
+        );
+        $data2 = array(
+            'username' => $username,
+        );
+
+        $this->M_All->update('konsumen', $where, $data);
+        $this->M_All->update('user', $where, $data2);
+    }
+
     public function vendor()
     {
         $data['result'] = $this->M_All->get('vendor')->result();
