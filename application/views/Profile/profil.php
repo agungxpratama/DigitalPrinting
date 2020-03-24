@@ -84,7 +84,7 @@
                                                             <form class="" action="<?= base_url('index.php/konsumen/update') ?>" method="post">
                                                                 <div class="form-group col-md-6">
                                                                   <label for="inputEmail4">Nama Lengkap</label>
-                                                                  <input type="email" class="form-control" id="inputEmail4" placeholder="Nama" name="nama" value="<?= $result->username ?>">
+                                                                  <input type="text" class="form-control" id="inputEmail4" placeholder="Nama" name="nama" value="<?= $result->username ?>">
                                                                   <input type="hidden" name="iduser" value="<?= $result->iduser ?>">
                                                                 </div>
                                                                 <div class="form-group col-md-6">
