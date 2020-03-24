@@ -89,11 +89,11 @@
                                                                 </div>
                                                                 <div class="form-group col-md-6">
                                                                   <label for="inputEmail4">Alamat</label>
-                                                                  <input type="email" class="form-control" id="inputEmail4" placeholder="Alamat" name="alamat" value="<?= $result->alamat ?>">
+                                                                  <input type="text" class="form-control" id="inputEmail4" placeholder="Alamat" name="alamat" value="<?= $result->alamat ?>">
                                                                 </div>
                                                                 <div class="form-group col-md-6">
                                                                   <label for="inputEmail4">No Hp</label>
-                                                                  <input type="email" class="form-control" id="inputEmail4" placeholder="No HP" name="no_hp" value="<?= $result->noHp ?>">
+                                                                  <input type="text" class="form-control" id="inputEmail4" placeholder="No HP" name="no_hp" value="<?= $result->noHp ?>">
                                                                 </div>
                                                           </div>
                                                           <div class="modal-footer">
