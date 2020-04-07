@@ -154,7 +154,7 @@ class Konsumen extends CI_Controller {
             'iduser' => $iduser,
         );
         $where_ = array(
-            'id' => , );
+            'id' => 1, );
         $data = array(
             'alamat' => $alamat,
             'noHp' => $no_hp,
