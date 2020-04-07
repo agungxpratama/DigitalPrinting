@@ -55,6 +55,15 @@
 <script src="<?= base_url()?>assets_admin/js/demo/chart-area-demo.js"></script>
 <script src="<?= base_url()?>assets_admin/js/demo/chart-pie-demo.js"></script>
 
+<script src="<?= base_url('assets_admin/'); ?>datatables/js/jquery.dataTables.min.js"></script>
+<script src="<?= base_url('assets_admin/'); ?>datatables/js/dataTables.bootstrap4.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#dataTable').DataTable();
+    });
+</script>
+
+
 </body>
 
 </html>

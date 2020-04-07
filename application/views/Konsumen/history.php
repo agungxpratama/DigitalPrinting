@@ -45,7 +45,7 @@
         <div class="table-responsive">
           <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
               <!-- <?php print_r($result) ?> -->
-    <table id="example" class="table table-striped table-bordered" style="width:100%">
+    <table id="dataTable" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>
                 <th>ID Invoice</th>

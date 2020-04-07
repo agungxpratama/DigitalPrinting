@@ -68,7 +68,7 @@
 
                                                     </div>
 
-                                                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModalCenter">Edit Profile</button><br><br>
+                                                    <a href="<?= base_url('index.php/konsumen/view_profil/') ?>" type="button" class="btn btn-info" >Edit Profile</a><br><br>
 
                                                     <!-- Modal -->
                                                     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -81,7 +81,7 @@
                                                             </button>
                                                           </div>
                                                           <div class="modal-body">
-                                                            <form class="" action="<?= base_url('index.php/konsumen/update') ?>" method="post">
+                                                            <form class="" action="<?= base_url() ?>index.php/konsumen/update" method="post">
                                                                 <div class="form-group col-md-6">
                                                                   <label for="inputEmail4">Nama Lengkap</label>
                                                                   <input type="text" class="form-control" id="inputEmail4" placeholder="Nama" name="nama" value="<?= $result->username ?>">
@@ -95,10 +95,11 @@
                                                                   <label for="inputEmail4">No Hp</label>
                                                                   <input type="text" class="form-control" id="inputEmail4" placeholder="No HP" name="no_hp" value="<?= $result->noHp ?>">
                                                                 </div>
+                                                                <input type="submit" class="btn btn-primary">Update</button>
+
                                                           </div>
                                                           <div class="modal-footer">
                                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                            <button type="submit" class="btn btn-primary">Update</button>
                                                             </form>
                                                           </div>
                                                         </div>

@@ -133,7 +133,18 @@ class Konsumen extends CI_Controller {
         $this->load->view('admin/footer');
     }
 
-    public function update()
+    public function view_profil()
+    {
+        $where = array('user.username' => $this->session->userdata('nama'), );
+        $data['result'] = $this->M_All->join('konsumen', 'user', $where)->row();
+        $this->load->view('admin/header');
+        // $this->load->view('profile/headprofil');
+        $this->load->view('profile/edit', $data);
+        // $this->load->view('profile/jsprofil');
+        $this->load->view('admin/footer');
+    }
+
+    public function update_profil()
     {
         $nama = $this->input->post('nama');
         $iduser = $this->input->post('iduser');
@@ -142,6 +153,8 @@ class Konsumen extends CI_Controller {
         $where = array(
             'iduser' => $iduser,
         );
+        $where_ = array(
+            'id' => , );
         $data = array(
             'alamat' => $alamat,
             'noHp' => $no_hp,
@@ -151,7 +164,7 @@ class Konsumen extends CI_Controller {
         );
 
         $this->M_All->update('konsumen', $where, $data);
-        $this->M_All->update('user', $where, $data2);
+        // $this->M_All->update('user', $where, $data2);
         redirect('index.php/konsumen/data_profil');
     }
 
